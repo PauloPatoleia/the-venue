@@ -13,6 +13,12 @@ class Header extends Component {
         drawerOpen: false
     }
 
+    toggleDrawer = (value) => {
+        this.setState({
+            drawerOpen: value
+        })
+    }
+
     render() {
         return (
             <AppBar
@@ -33,14 +39,14 @@ class Header extends Component {
                     <IconButton
                         arial-label="Menu"
                         color="inherit"
-                        onClick={()=> console.log('open')}
+                        onClick={() => this.toggleDrawer(true)}
                     >
                         <MenuIcon></MenuIcon>
                     </IconButton>
 
                     <SideDrawer
-                        open={this.state.draw}
-                        close={}
+                        open={this.state.drawerOpen}
+                        onClose={(value) => this.toggleDrawer(value)}
                     ></SideDrawer>
                 </Toolbar>
             </AppBar>
