@@ -33,12 +33,12 @@ class TimeUntil extends Component {
     componentDidMount() {
         setInterval(() => {
             this.getTimeUntil(this.state.deadline)
-        },1000)
+        },100)
     }
 
     render() {
         return (
-            <Slide left delay={1000}>
+            <Slide left delay={400}>
             <div className="countdown_wrapper">
 
                 <div className="countdown_top">
