@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './resources/styles.css';
+import { Element } from 'react-scroll';
 
 import Header from './components/header_footer/Header'
 import Freatured from './components/featured'
@@ -16,11 +17,27 @@ class App extends Component {
     return (
       <div className="App">
        <Header/>
-       <Freatured/>
-       <VenueInfo></VenueInfo>
-       <Highlights></Highlights>
-       <Pricing></Pricing>
-       <Location></Location>
+
+       <Element name="event">     
+          <Freatured/>
+       </Element>
+
+       <Element name="info">
+          <VenueInfo></VenueInfo>
+       </Element>
+
+      <Element name="hightlights">
+           <Highlights></Highlights>
+       </Element>
+
+      <Element name="price">
+          <Pricing></Pricing>
+      </Element>
+
+      <Element name="location">
+          <Location></Location>
+      </Element>
+
        <Footer></Footer>
       </div>
       
