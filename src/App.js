@@ -6,6 +6,8 @@ import Freatured from './components/featured'
 import VenueInfo from './components/VenueInfo'
 import Highlights from './components/Highlights'
 import Pricing from './components/pricing'
+import Location from './components/location'
+import Footer from './components/header_footer/Footer'
 
 
 
@@ -18,6 +20,8 @@ class App extends Component {
        <VenueInfo></VenueInfo>
        <Highlights></Highlights>
        <Pricing></Pricing>
+       <Location></Location>
+       <Footer></Footer>
       </div>
       
     );
